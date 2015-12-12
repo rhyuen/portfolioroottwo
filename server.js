@@ -11,6 +11,7 @@ var app = express();
 
 
 app.set("port", process.env.PORT || 9898);
+app.set("envitem", process.env.ENVITEM || "NOTHING SET");
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -21,7 +22,7 @@ app.engine(".hbs", exphbs({extname: ".hbs"}));
 app.set("view engine", ".hbs");
 
 app.get("/", function(req, res){
-  res.render("index");
+  res.render("index", {configItem: app.get("envitem")});
 });
 
 
