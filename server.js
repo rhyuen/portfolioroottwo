@@ -25,7 +25,7 @@ app.set("view engine", ".hbs");
 mongoose.connect(config.db, function(err){
   if(err)
     console.error(err);
-  console.log("DB CONN success.");
+  console.log("DB CONN attempted.");
 });
 
 app.get("/", function(req, res){

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inspire Me Now!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <div class "container">
+      <div class = "row">
+        <div>
+          <button  id = "left" >Previous</button>
+        </div>
+        <div id = "quote">
+          <p>Meow?</p>
+          <div></div>
+        </div>
+        <div>
+          <button id = "right" >Next</button>
+        </div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+      var quotes = [
+        "Be the change you want to see in the world",
+        "Just do it.",
+        "You're dying and, one day, you will die.  Make the most of the time you have.",
+        "Don't live by the clock, always waiting for tomorrow.  Live to become what you want to be.",
+        "Inspiration is fleeting.  Discipline is how you get stuff done.",
+        "Inspiration get you to start.  Discipline drags you over the finish line.",
+        "The first step to success is trying."
+      ];
+      var placement = 0;
+      $("#right").click(function(){
+        $("#quote").text(quotes[placement++]);
+        if(placement === quotes.length - 1)
+          placement = 0;
+      });
+
+    </script>
+  </body>
+</html>
