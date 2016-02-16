@@ -22,11 +22,12 @@ app.set("views", path.join(__dirname, "public/views"));
 app.engine(".hbs", exphbs({extname: ".hbs"}));
 app.set("view engine", ".hbs");
 
+/*
 mongoose.connect(config.db, function(err){
   if(err)
     console.error(err);
   console.log("DB CONN attempted.");
-});
+});*/
 
 app.get("/", function(req, res){
   res.render("index", {configItem: app.get("envitem")});
