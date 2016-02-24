@@ -10,15 +10,19 @@
       <form action = "/ajaxindex" method = "post">
         <fieldset>
           <legend>Contact Information</legend>
-          <label>Name</label><input type = "text" placeholder="John Doe" name = "formName"></input><br>
-          <label>Email</label><input type = "text" placeholder = "john.doe@gmail.com" name = "formEmail" ></input><br>
-          <input type = "submit" value = "submit">
+          <label>Name</label><input type = "text" placeholder="John Doe" name = "formName" id = "formname"></input><br>
+          <label>Email</label><input type = "text" placeholder = "john.doe@gmail.com" name = "formEmail" id = "formemail" ></input><br>
+          <input type = "submit" value = "submit" id = "inputsubmission">
         </fieldset>
       </form>
     </div>
     <script>
     $(document).ready(function(){
-
+      $("#inputsubmission").submit(function(){
+        var toTransmit = {"emailName": $("#formname").value(), "formName": $("#formEmail").value()};
+        //post
+        //clear values
+      });
     });
     </script>
   </body>

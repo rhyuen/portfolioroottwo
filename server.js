@@ -41,6 +41,10 @@ app.get("/ajaxindex", function(req, res){
   res.render("ajaxindex");
 });
 
+app.get("/quotes", function(req, res){
+  res.render("quotes");
+});
+
 app.post("/ajaxindex", function(req, res){
   console.log(req.body.formName);
   console.log(req.body.formEmail);
